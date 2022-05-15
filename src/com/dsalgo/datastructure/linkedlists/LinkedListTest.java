@@ -1,7 +1,13 @@
 package com.dsalgo.datastructure.linkedlists;
 
-public class SinglyLinkedListTest {
+public class LinkedListTest {
     public static void main(String[] args) {
+        /*singlyLinkedLists();
+        doublyLinkedLists();*/
+        circularSinglyLinkedLists();
+    }
+
+    private static void singlyLinkedLists() {
 
         /* Part 1: Create, add and remove nodes*/
         // Create a singly linked list
@@ -102,7 +108,19 @@ public class SinglyLinkedListTest {
         // Add two linked lists
         sortedListA.add(sortedListB);
         sortedListA.display();
-
-
     }
+
+    private static void doublyLinkedLists(){
+        DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
+        doublyLinkedList.insertEnd(1);
+        doublyLinkedList.insertStart(2);
+        doublyLinkedList.display();
+    }
+
+    private static void circularSinglyLinkedLists(){
+        CircularSinglyLinkedList circularSinglyLinkedList = new CircularSinglyLinkedList();
+        circularSinglyLinkedList.insertAtEnd(1).insertAtStart(2).insertAtEnd(3).insertAtStart(4);
+        circularSinglyLinkedList.display();
+    }
+
 }
