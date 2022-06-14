@@ -8,7 +8,9 @@ import java.util.stream.Stream;
 public class BubbleSort {
     public static void main(String[] args) {
         int[] arr = {9, 5, 2, 3, 1, 8, 7, 6, 4};
+        long start = System.currentTimeMillis();
         IntStream.of(bubbleSort(arr)).forEach(System.out::println);
+        System.out.println("time taken ->" +(System.currentTimeMillis()-start));
 
     }
 
