@@ -157,6 +157,18 @@ public class SinglyLinkedList {
         System.out.println("null");
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        Node nextNode = this.head;
+        while (null != nextNode) {
+            sb.append(nextNode.data).append("-->");
+            nextNode = nextNode.next;
+        }
+        sb.append("null");
+        return sb.toString();
+    }
+
     public int middleNode() {
         Node slow = this.head;
         Node fast = this.head;
